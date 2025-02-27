@@ -1,0 +1,10 @@
+Iniciar Programa 
+    Int a, b, c; 
+    a = 1.1; 
+    b = 3; 
+    c = 2.5; 
+    Leer a; 
+    Leer b; 
+    c = a * b - 3 * b; 
+    Mostrar c; 
+Finalizar 
