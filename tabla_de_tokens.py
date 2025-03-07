@@ -43,7 +43,7 @@ def analizar_archivo(archivo):
     return resultados
 
 # Archivo de prueba
-archivo_txt = "codigo.txt"  # Asegúrate de que el archivo existe en la misma carpeta
+archivo_txt = "/Users/aldomoreno/Desktop/Proyectos Automatas II/Aut-matas-2/codigo.txt"  # Asegúrate de que el archivo existe en la misma carpeta
 resultados = analizar_archivo(archivo_txt)
 
 # Mostrar en forma de tabla
