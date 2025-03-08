@@ -5,7 +5,6 @@ def generar_tabla_simbolos(tokens):
     tabla_simbolos = {}
     id_contador = 500  # ID inicial para identificadores
     palabras_reservadas = {"Iniciar", "Int", "Leer", "Mostrar", "Finalizar", "real", "entero", "Inicio", "Fin", "Escribir"}
-
     def agregar_a_tabla_simbolos(token, tipo, num_linea, valor=None):
         nonlocal id_contador
         if token not in tabla_simbolos:
