@@ -1,10 +1,10 @@
 Iniciar Programa
     Int a, b;
     float c;
-    a = 2;
+    a = 0;
     b = 3;
-    c = a * b - 3;
-    Leer a;
-    Leer b;
+    c = 2.5;
+    a = a + 1.2;
+    Mostrar a;
     Mostrar c;
 Finalizar

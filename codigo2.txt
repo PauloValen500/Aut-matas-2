@@ -1,0 +1,10 @@
+Iniciar Programa
+    real x, y;
+    Int z;
+    x = 3.5;
+    y = x + 2.5 * (4 - 1);
+    z = 10 - 3 * 2;
+    Mostrar x;
+    Mostrar y;
+    Mostrar z;
+Finalizar

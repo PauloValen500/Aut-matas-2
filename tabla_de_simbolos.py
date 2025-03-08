@@ -193,7 +193,7 @@ def generar_tabla_simbolos(tokens):
 
 if __name__ == '__main__':
     # Ruta al archivo fuente (ajustar según corresponda)
-    archivo_txt = "./codigo.txt"
+    archivo_txt = "/Users/aldomoreno/Desktop/Proyectos Automatas II/Aut-matas-2/codigo.txt"
     
     # Obtener la lista de tokens
     tokens = analizar_archivo(archivo_txt)
@@ -204,6 +204,7 @@ if __name__ == '__main__':
     # Crear un DataFrame para la tabla de símbolos sin la columna de errores
     columnas_tabla = ["Tipo", "Id_Token", "Repeticiones", "Lineas", "Valor"]
     df = pd.DataFrame.from_dict(tabla_simbolos, orient='index', columns=columnas_tabla)
+    print("\n")
     print(df.to_string())
     
     # Recopilar e imprimir los errores detectados (cada error en una línea)
