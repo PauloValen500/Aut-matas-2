@@ -1,10 +1,14 @@
 Iniciar Programa
-    Int a, b;
-    float c;
-    a = 2;
-    b = 3;
-    c = a * b - 3;
-    Leer a;
-    Leer b;
-    Mostrar c;
+Int a, b, c;
+Real d, e, f;
+a = 0; b=0; c=0;
+d=0.0; e=0.0; f=0.0; 
+Leer a;
+Leer b;
+Leer d;
+Leer e;
+c = a * b + 3 + b;
+f = 3.14 * d / e;
+Mostrar c;
+Mostrar f;
 Finalizar

@@ -63,7 +63,7 @@ def generar_tabla_simbolos(tokens):
             continue
 
         # Declaración de tipo válida: "Int", "real" o "float"
-        if token in {"Int", "real", "float"}:
+        if token in {"Int", "eal", "float"}:
             if token == "Int":
                 last_declared_type = "Entero"
             else:
@@ -193,7 +193,7 @@ def generar_tabla_simbolos(tokens):
 
 if __name__ == '__main__':
     # Ruta al archivo fuente (ajustar según corresponda)
-    archivo_txt = "/Users/aldomoreno/Desktop/Proyectos Automatas II/Aut-matas-2/codigo.txt"
+    archivo_txt = "./codigo.txt"
     
     # Obtener la lista de tokens
     tokens = analizar_archivo(archivo_txt)
