@@ -1,10 +1,14 @@
-Iniciar Programa
-    real x, y;
-    Int z;
-    x = 3.5;
-    y = x + 2.5 * (4 - 1);
-    z = 10 - 3 * 2;
-    Mostrar x;
-    Mostrar y;
-    Mostrar z;
+Iniciar Progrma1
+Int a, b;
+Real c, d, e, f;
+a = 0; b=0;
+c=0.0; d=0.0; e=0.0; f=0.0; 
+Leer a;
+Leer b;
+Leer d;
+Leer e;
+c = a * b + 3 + b;
+f = 3.14 * d / e;
+Mostrar c;
+Mostrar f;
 Finalizar

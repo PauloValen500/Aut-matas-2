@@ -1,25 +1,41 @@
 import re
 import pandas as pd
 
-def analizar_archivo(archivo):
-    # Definir las categorías de tokens
-    palabras_reservadas = {"Iniciar", "Int","Real", "Leer", "Mostrar", "Finalizar"}
-    simbolos_especiales = {"(", ")", "{", "}", ";", ","}
-    operadores_aritmeticos = {"+", "-", "*", "/"}
-    simbolo_asignacion = {"="}
-    
-    # Expresiones regulares para los tokens
-    patron_identificador = re.compile(r'^[a-zA-Z_]\w*$')
-    patron_flotante = re.compile(r'^\d+\.\d+$')  # Asegura al menos un número antes y después del punto
-    patron_entero = re.compile(r'^\d+$')
+def obtener_config():
+    """
+    Devuelve un diccionario con la configuración utilizada en el análisis léxico.
+    """
+    config = {
+        "ARCHIVO_FUENTE": "/Users/aldomoreno/Desktop/Proyectos Automatas II/Aut-matas-2/codigo2.txt",
+        "PALABRAS_RESERVADAS": {"Iniciar", "Int", "Real", "Leer", "Mostrar", "Finalizar"},
+        "SIMBOLOS_ESPECIALES": {"(", ")", "{", "}", ";", ","},
+        "OPERADORES_ARITMETICOS": {"+", "-", "*", "/"},
+        "SIMBOLO_ASIGNACION": {"="}
+    }
+    return config
 
-    resultados = []
+def analizar_archivo(archivo):
+    """
+    Analiza el archivo fuente y devuelve una lista de tokens.
+    Cada token se representa como una tupla: (token, tipo, línea)
+    """
+    # Definir expresiones regulares para identificar tokens
+    patron_identificador = re.compile(r'^[a-zA-Z_]\w*$')
+    patron_flotante = re.compile(r'^\d+\.\d+$')   # Al menos un dígito antes y después del punto
+    patron_entero = re.compile(r'^\d+$')
     
+    # Obtener la configuración necesaria
+    config = obtener_config()
+    palabras_reservadas = config["PALABRAS_RESERVADAS"]
+    simbolos_especiales = config["SIMBOLOS_ESPECIALES"]
+    operadores_aritmeticos = config["OPERADORES_ARITMETICOS"]
+    simbolo_asignacion = config["SIMBOLO_ASIGNACION"]
+    
+    resultados = []
     with open(archivo, 'r') as f:
         for num_linea, linea in enumerate(f, start=1):
-            # Modificación en la expresión regular para reconocer números decimales correctament
-            tokens = re.findall(r'\d+\.\d+|\w+|[+\-*/=<>!(){};,]', linea)  
-
+            # Buscar números decimales, palabras y símbolos especiales
+            tokens = re.findall(r'\d+\.\d+|\w+|[+\-*/=<>!(){};,]', linea)
             for token in tokens:
                 if token in palabras_reservadas:
                     tipo = "Palabra reservada"
@@ -37,15 +53,15 @@ def analizar_archivo(archivo):
                     tipo = "Identificador"
                 else:
                     tipo = "Desconocido"
-                
                 resultados.append((token, tipo, num_linea))
-    
     return resultados
 
-# Archivo de prueba
-archivo_txt = "./codigo.txt"  # Asegúrate de que el archivo existe en la misma carpeta
-resultados = analizar_archivo(archivo_txt)
-
-# Mostrar en forma de tabla
-df = pd.DataFrame(resultados, columns=["Token", "Tipo", "Linea"])
-print(df.to_string(index=False))
+if __name__ == '__main__':
+    config = obtener_config()
+    archivo = config["ARCHIVO_FUENTE"]
+    tokens = analizar_archivo(archivo)
+    
+    # Imprimir la tabla de tokens usando pandas
+    df_tokens = pd.DataFrame(tokens, columns=["Token", "Tipo", "Linea"])
+    print("Tabla de Tokens:")
+    print(df_tokens.to_string(index=False))
