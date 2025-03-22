@@ -1,0 +1,11 @@
+Iniciar Programa1
+Int a,b,c;
+Real z,x,y;
+Leer a;
+Leer b;
+Leer c;
+Leer z;
+Leer x;
+y = a + b - c * z * x;
+Mostrar y;
+Finalizar

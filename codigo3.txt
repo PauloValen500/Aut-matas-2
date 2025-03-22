@@ -1,0 +1,8 @@
+Iniciar Programa1
+Int a,b;
+Real c,d;
+a = 3; b = 1;
+c = 1.2; d = 2.1;
+Mostrar c;
+Mostrar b;
+Finalizar

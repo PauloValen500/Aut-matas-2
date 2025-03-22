@@ -1,4 +1,4 @@
-Iniciar Progrma1
+Iniciar Programa1
 Int a, b;
 Real c, d, e, f;
 a = 0; b=0;

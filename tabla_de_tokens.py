@@ -6,7 +6,7 @@ def obtener_config():
     Devuelve un diccionario con la configuración utilizada en el análisis léxico.
     """
     config = {
-        "ARCHIVO_FUENTE": "/Users/aldomoreno/Desktop/Proyectos Automatas II/Aut-matas-2/codigo2.txt",
+        "ARCHIVO_FUENTE": "./codigo4.txt",
         "PALABRAS_RESERVADAS": {"Iniciar", "Int", "Real", "Leer", "Mostrar", "Finalizar"},
         "SIMBOLOS_ESPECIALES": {"(", ")", "{", "}", ";", ","},
         "OPERADORES_ARITMETICOS": {"+", "-", "*", "/"},

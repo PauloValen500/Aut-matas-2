@@ -473,7 +473,7 @@ if __name__ == '__main__':
         sys.exit(1)
     
     ast_text = ast_root.pretty_print()
-    with open("ast.txt", "w") as f:
+    with open("ast.txt", "w", encoding="utf-8") as f:
         f.write(ast_text)
     
     print("\nEl AST se ha generado y guardado en 'ast.txt'")

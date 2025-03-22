@@ -1,0 +1,19 @@
+└── Program (línea 1): Programa1
+    ├── Declarations: None
+    │   ├── Declaration (línea 2): Entero
+    │   │   ├── Identifier (línea 2): a
+    │   │   └── Identifier (línea 2): b
+    │   └── Declaration (línea 3): Real
+    │       ├── Identifier (línea 3): c
+    │       └── Identifier (línea 3): d
+    └── Statements: None
+        ├── Assignment (línea 4): a
+        │   └── Number (línea 4): 3
+        ├── Assignment (línea 4): b
+        │   └── Number (línea 4): 1
+        ├── Assignment (línea 5): c
+        │   └── Number (línea 5): 1.2
+        ├── Assignment (línea 5): d
+        │   └── Number (línea 5): 2.1
+        ├── Output (línea 6): c
+        └── Output (línea 7): b
