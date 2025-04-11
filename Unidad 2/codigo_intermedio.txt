@@ -1,0 +1,49 @@
+--- Ejemplo 1 ---
+Código Intermedio:
+   t1 = b + c
+   a = t1
+
+--- Ejemplo 2 ---
+Código Intermedio:
+   t1 = (b + c) * d
+   a = t1
+
+--- Ejemplo 3 ---
+Código Intermedio:
+   if not (a > b) goto L1
+   t1 = a - b
+   a = t1
+   goto L2
+   L1:
+   t2 = b - a
+   b = t2
+   L2:
+
+--- Ejemplo 4 ---
+Código Intermedio:
+   L1:
+   if not (a < 10) goto L2
+   t1 = a + 1
+   a = t1
+   goto L1
+   L2:
+
+--- Ejemplo 5 ---
+Código Intermedio:
+   sum = 0
+   i = 0
+   L1:
+   if not (i < 10) goto L2
+   if not (i % 2 == 0) goto L3
+   t1 = sum + i
+   sum = t1
+   goto L4
+   L3:
+   t2 = sum - i
+   sum = t2
+   L4:
+   t3 = i + 1
+   i = t3
+   goto L1
+   L2:
+
