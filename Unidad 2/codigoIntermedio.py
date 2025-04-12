@@ -228,9 +228,9 @@ def mostrar_ejemplos(ejemplos):
     """
     for clave, contenido in ejemplos.items():
         print(f"--- {clave} ---")
-        print("Código Fuente:")
+        print("Codigo Fuente:")
         print(contenido["codigo_fuente"])
-        print("Código Intermedio:")
+        print("Codigo Intermedio:")
         for linea in contenido["codigo_intermedio"]:
             print("   " + linea)
         print()
@@ -245,7 +245,7 @@ def guardar_codigo_intermedio(ejemplos, nombre_archivo="codigo_intermedio.txt"):
         with open(ruta_archivo, "w", encoding="utf-8") as f:
             for clave, contenido in ejemplos.items():
                 f.write(f"--- {clave} ---\n")
-                f.write("Código Intermedio:\n")
+                f.write("Codigo Intermedio:\n")
                 for linea in contenido["codigo_intermedio"]:
                     f.write("   " + linea + "\n")
                 f.write("\n")
@@ -261,8 +261,8 @@ def main():
       3. Lo muestra y guarda en un archivo de texto.
     """
     directorio_script = os.path.dirname(os.path.abspath(__file__))
-    print("Directorio donde se guardará el archivo:", directorio_script)
-    print("Iniciando la conversión a código intermedio...\n")
+    print("Directorio donde se guardara el archivo:", directorio_script)
+    print("Iniciando la conversion a codigo intermedio...\n")
 
     # Cargar los ejemplos
     ejemplos = obtener_ejemplos()
